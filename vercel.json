@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/vless.js": {
+      "runtime": "@vercel/node"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/vless.js"
+    }
+  ]
+}
