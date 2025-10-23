@@ -1,13 +1,15 @@
 {
-  "functions": {
-    "api/vless.js": {
-      "runtime": "@vercel/node"
-    }
-  },
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/",
-      "destination": "/api/vless.js"
+      "src": "api/vless.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/api/vless.js"
     }
   ]
 }
